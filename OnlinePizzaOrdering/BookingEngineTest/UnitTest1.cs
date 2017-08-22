@@ -13,6 +13,8 @@ namespace BookingEngineTest
         [TestMethod]
         public void PlacingOrderTest()
         {
+            PizzaInventory pizzas = new PizzaInventory();
+            pizzas.AddPizzaToInventory("Cheese Pizza", "M");
             Order ordering = new Order();
             OrderList order = new OrderList();
             Assert.IsTrue(ordering.PlacingOrder(order));
